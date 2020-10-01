@@ -26,3 +26,15 @@ The evaluation test consume data from an API, send the results to an exchange on
     $   php bin/console store-to-db
 ```
 
+## Database
+
+In the database, a table with the name 'Messages' created. The columns of the table represent the values of each consumed message. An Entity was created with the name 'Message', the code can be found in src/Entity/Message.php. The table created using the following commands of Symfony and Doctrine.
+```
+    $   php bin/console make:entity
+```
+```
+    $   php bin/console make:migration
+```
+```
+    $   php bin/console doctrine:migrations:migrate
+```
